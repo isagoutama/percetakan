@@ -34,7 +34,7 @@
                                           </p>
                                           <p>
                                             @if (Auth::user() && Auth::user()->role=='admin')
-                                                <a href="#" class="btn btn-warning btn-xs waves-effect"><i class="material-icons">mode_edit</i></a>
+                                                <a href="{{route('produk.edit',['id'=>$key->uuid])}}" class="btn btn-warning btn-xs waves-effect"><i class="material-icons">mode_edit</i></a>
                                                 <a href="{{route('produk.delete',['id'=>$key->uuid])}}" class="btn btn-danger btn-xs waves-effect" onclick="return confirm('Serius ingin dihapus?')"><i class="material-icons">delete</i></a>
                                                 @else
                                                   <a href="#" class="btn btn-warning btn-xs waves-effect"><i class="material-icons">add_shopping_cart</i></a>

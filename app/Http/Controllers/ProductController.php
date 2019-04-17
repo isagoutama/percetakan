@@ -57,6 +57,7 @@ class ProductController extends Controller
 
     public function edit($id)
     {
+      $data['kategori'] = Catalog::all();
       $data['produk'] = Product::where('uuid',$id)->firstOrFail();
       return view('produk.edit')->with($data);
     }
@@ -71,13 +72,13 @@ class ProductController extends Controller
       $produk->catalog_id = $r->kategori;
       $produk->str_id = strtolower(str_replace(" ","-",$produk->name));
       $produk->uuid = $this->uuid;
-      if ($produk->image != $r->image) {
+      if ($r->image != "") {
         File::delete(public_path().'/img/produk/'.$produk->image);
         $fileName = time().'.'.$file->getClientOriginalName();
         $destinationPath = 'img/produk';
         $file->move($destinationPath,$fileName);
+        $produk->image = $fileName;
       }
-      $produk->image = $fileName;
       $produk->description = $r->description;
       $produk->save();
 

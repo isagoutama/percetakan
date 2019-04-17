@@ -32,6 +32,13 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('delete/{id}','ProductController@delete')->name('delete');
   });
 
+  Route::group(['prefix'=>'carousel','as'=>'carousel.'], function (){
+    Route::get('/','App\CorouselController@index')->name('index');
+    Route::get('create','App\CorouselController@create')->name('create');
+    Route::post('save','App\CorouselController@save')->name('save');
+    Route::get('delete/{id}','App\CorouselController@delete')->name('delete');
+  });
+
 
   Route::get('/home', 'DashboardController@index')->name('home');
 });

@@ -32,7 +32,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="{{route('home')}}">
+                    <a href="{{route('carousel.index')}}">
                       <span>Slide Show</span>
                     </a>
                   </li>

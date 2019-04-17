@@ -1,19 +1,19 @@
 @extends('app')
 @section('css')
   <!-- Multi Select Css -->
-  <link href="../../plugins/multi-select/css/multi-select.css" rel="stylesheet">
+  <link href="{{asset('plugins/multi-select/css/multi-select.css')}}" rel="stylesheet">
 
   <!-- Bootstrap Spinner Css -->
-  <link href="../../plugins/jquery-spinner/css/bootstrap-spinner.css" rel="stylesheet">
+  <link href="{{asset('plugins/jquery-spinner/css/bootstrap-spinner.css')}}" rel="stylesheet">
 
   <!-- Bootstrap Tagsinput Css -->
-  <link href="../../plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+  <link href="{{asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.css')}}" rel="stylesheet">
 
   <!-- Bootstrap Select Css -->
-  <link href="../../plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+  <link href="{{asset('plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
 
   <!-- noUISlider Css -->
-  <link href="../../plugins/nouislider/nouislider.min.css" rel="stylesheet" />
+  <link href="{{asset('plugins/nouislider/nouislider.min.css')}}" rel="stylesheet" />
 @endsection
 @section('content')
             <div class="row clearfix">
@@ -67,21 +67,21 @@
 @endsection
 @section('js')
   <!-- Bootstrap Colorpicker Js -->
-  <script src="../../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+  <script src="{{('plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js')}}"></script>
 
   <!-- Input Mask Plugin Js -->
-  <script src="../../plugins/jquery-inputmask/jquery.inputmask.bundle.js"></script>
+  <script src="{{('plugins/jquery-inputmask/jquery.inputmask.bundle.js')}}"></script>
 
   <!-- Multi Select Plugin Js -->
-  <script src="../../plugins/multi-select/js/jquery.multi-select.js"></script>
+  <script src="{{('plugins/multi-select/js/jquery.multi-select.js')}}"></script>
 
   <!-- Jquery Spinner Plugin Js -->
-  <script src="../../plugins/jquery-spinner/js/jquery.spinner.js"></script>
+  <script src="{{('plugins/jquery-spinner/js/jquery.spinner.js')}}"></script>
 
   <!-- Bootstrap Tags Input Plugin Js -->
-  <script src="../../plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+  <script src="{{('plugins/bootstrap-tagsinput/bootstrap-tagsinput.js')}}"></script>
 
   <!-- noUISlider Plugin Js -->
-  <script src="../../plugins/nouislider/nouislider.js"></script>
+  <script src="{{('plugins/nouislider/nouislider.js')}}"></script>
 
-  <script src="../../js/pages/forms/advanced-form-elements.js"></script>
+  <script src="{{('js/pages/forms/advanced-form-elements.js')}}"></script>
