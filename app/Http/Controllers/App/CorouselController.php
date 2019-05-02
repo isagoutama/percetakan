@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Corousel;
+use File;
 
 class CorouselController extends Controller
 {
@@ -28,6 +29,16 @@ class CorouselController extends Controller
       $carousel->save();
     }
 
+    return redirect()->route('carousel.index');
+  }
+
+  public function delete($id)
+  {
+    $carousel = Corousel::find($id);
+    // dd($carousel);
+    if (File::delete(public_path().'/img/carousel/'.$carousel->image)) {
+        $carousel->delete();
+      }
     return redirect()->route('carousel.index');
   }
 }

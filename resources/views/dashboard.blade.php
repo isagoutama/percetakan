@@ -1,4 +1,4 @@
 @extends('app')
 @section('content')
-  @include('app.carousel', ['some' => 'data'])
+  @include('app.carousel', ['simages' => $slides])
 @endsection

@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Corousel;
 
 class DashboardController extends Controller
 {
     public function index()
-    {
-      return view('dashboard');
+    {	
+    	$data['slides'] = Corousel::all();
+     	return view('dashboard')->with($data);
     }
 }

@@ -40,6 +40,9 @@ Route::group(['middleware'=>'auth'], function(){
   });
 
 
-  Route::get('/home', 'DashboardController@index')->name('home');
+  Route::get('/home', function ()
+  {
+    return redirect()->route('dashboard');
+  })->name('home');
 });
 Auth::routes();
